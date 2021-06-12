@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title> Đăng kí </title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- <script type="text/javascript" src="js/script.js"></script> -->
+</head>
+<body>
+  <!-- SỬ DỤNG THUỘC TÍNH "pattern" -->
+  <h3>Đăng Ký</h3>
+  <form action="" name="frmDangKi" class="form_signin">     
+    <table>
+      <tr>
+        <td>
+          Tên đăng nhập :
+        </td>
+        <td>
+          <input type="text" name="username" pattern="[a-z0-9_-]{8,32}"placeholder="Nhập vào tên đăng nhập..." title="Phải chứa từ 8 ký tự đến 32 ký tự không dấu và không chứa ký tự đặt biệt !,@.#.$...!" id="tendangnhap" required>
+        </td>      
+      </tr>
+      <tr>
+          <td>
+            Mật khẩu :
+          </td>
+          <td>
+            <input type="password"  name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,32}" title="Phải chứa ít nhất một số và một chữ hoa và chữ thường và từ 8 đến 32 ký tự không dấu...!" placeholder="Nhập vào mật khẩu" id="matkhau" required>
+          </td>
+      </tr>
+      <tr>
+          <td>
+            Nhập lại mật khẩu :
+          </td>
+          <td>
+            <input type="password"  name="re-password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,32}" title="Phải chứa ít nhất một số và một chữ hoa và chữ thường và từ 8 đến 32 ký tự không dấu...!" placeholder="Nhập vào mật khẩu" id="matkhau" required>
+          </td>
+      </tr>
+      <tr> 
+        <td>
+          Email :
+        </td>
+        <td>
+          <input type="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="Nhập vào email..." id="email" required>
+        </td>
+      </tr> 
+      <tr>
+        <td> 
+          <input type="submit" class="check" value="ĐĂNG KÍ" id="nutDangki" onclick="KiemTraHopLe()"/>
+        </td>
+      </tr>
+    </table>
+  </form>
+</body>
+</html>
